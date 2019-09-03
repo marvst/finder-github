@@ -94,6 +94,15 @@ export default {
       console.log(id)
       this.userList = this.userList.filter(e => e.id != id)
     }
+  },
+  mounted() {
+      this.userList = JSON.parse(localStorage.userListStorage)
+  },
+  watch: {
+    userList: function() {
+      let jsonAux = JSON.stringify(this.userList)
+      localStorage.userListStorage = jsonAux  
+    }
   }
 };
 </script>

@@ -5,6 +5,9 @@
 
         <v-layout row wrap>
           <v-flex md4 xs12 >
+              <router-link to="/"  style="text-decoration: none !important">
+                  <v-btn color="red lighten-2 white--text">Voltar</v-btn>
+              </router-link>
               <center>
                 <v-avatar :size="200" class="mb-4">
                   <img :src="info.data.avatar_url" alt="avatar">
